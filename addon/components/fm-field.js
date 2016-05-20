@@ -13,7 +13,8 @@ export default Ember.Component.extend({
   wrapperClass: Ember.computed.reads('fmConfig.wrapperClass'),
 
   init: function() {
-    if(!this.get('optionValuePath')) {
+    var optionValuePath = this.get('optionValuePath');
+    if(optionValuePath === undefined || optionValuePath === null) {
       this.set('optionValuePath', 'content.value');
     }
     if(!this.get('optionLabelPath')) {
