@@ -11,7 +11,7 @@ export default Ember.TextArea.extend(DataAttributesSupport, {
       this.set('elementId', this.get('parentView.forAttribute'));
     }
     this._super(arguments);
-    this.setDataAttributes();
+    this.setDataAttributes(this.get('parentView'));
   }
 
 });
