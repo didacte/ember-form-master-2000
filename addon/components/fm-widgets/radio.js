@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   layout: layout,
 
   checked: computed('value', 'widgetAttrs.targetValue', function() {
-    return !!this.get('value') && this.get('value') === this.get('widgetAttrs.targetValue');
+    return typeof this.get('value') !== 'undefined' && this.get('value') === this.get('widgetAttrs.targetValue');
   }),
 
   didReceiveAttrs(){
