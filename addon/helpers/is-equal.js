@@ -7,7 +7,11 @@ function isEqualHelper(params) {
 var forExport = null;
 if(typeof Ember.HTMLBars.makeBoundHelper === 'function') {
   forExport = Ember.Helper.helper(isEqualHelper);
-}else{
+}
+else if(typeof Ember.Handlebars.makeBoundHelper === 'function') {
   forExport = Ember.Handlebars.makeBoundHelper(isEqualHelper);
+}
+else {
+  forExport = Ember.Helper.helper(isEqualHelper);
 }
 export default forExport;
