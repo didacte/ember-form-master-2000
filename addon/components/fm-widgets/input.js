@@ -5,6 +5,9 @@ export default Ember.TextField.extend({
   placeholder: oneWay('widgetAttrs.placeholder'),
   name: oneWay('widgetAttrs.name'),
   maxlength: oneWay('widgetAttrs.maxlength'),
+  min: oneWay('widgetAttrs.min'),
+  max: oneWay('widgetAttrs.max'),
+  step: oneWay('widgetAttrs.step'),
   disabled: Ember.computed.oneWay('widgetAttrs.disabled'),
 
   type: Ember.computed('widgetAttrs.type', function(){
