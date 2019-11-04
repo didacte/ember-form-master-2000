@@ -9,6 +9,7 @@ export default TextArea.extend({
   rows: oneWay('widgetAttrs.rows'),
   cols: oneWay('widgetAttrs.cols'),
   disabled: oneWay('widgetAttrs.disabled'),
+  maxlength: oneWay('widgetAttrs.maxlength'),
 
   afterRender(){
     this.attrs.registerWidgetId(this.elementId);
