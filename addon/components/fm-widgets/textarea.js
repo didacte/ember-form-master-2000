@@ -10,6 +10,7 @@ export default TextArea.extend({
   cols: oneWay('widgetAttrs.cols'),
   disabled: oneWay('widgetAttrs.disabled'),
   maxlength: oneWay('widgetAttrs.maxlength'),
+  tabindex: oneWay('widgetAttrs.tabindex'),
 
   afterRender(){
     this.attrs.registerWidgetId(this.elementId);

@@ -9,6 +9,7 @@ export default TextField.extend({
   name: oneWay('widgetAttrs.name'),
   disabled: oneWay('widgetAttrs.disabled'),
   maxlength: oneWay('widgetAttrs.maxlength'),
+  tabindex: oneWay('widgetAttrs.tabindex'),
 
   type: computed('widgetAttrs.type', function(){
     return this.get('widgetAttrs.type') || 'text';
